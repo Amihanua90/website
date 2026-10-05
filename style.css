@@ -238,6 +238,33 @@ section{padding:96px 0;}
 .cta-band .wrap{display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;}
 .cta-band h2{font-size:1.5rem; margin:0;}
 
+/* Rechtstexte */
+.legal{max-width:760px;}
+.legal h2{font-size:1.35rem; margin:44px 0 12px; padding-top:28px; border-top:1px solid var(--line);}
+.legal h2:first-child{margin-top:0; padding-top:0; border-top:none;}
+.legal h3{font-size:1.05rem; margin:28px 0 8px;}
+.legal p{color:var(--ink); max-width:none; font-size:.98rem;}
+.legal ul{margin:0 0 1em 0; padding-left:20px; color:var(--ink); font-size:.98rem;}
+.legal li{margin-bottom:6px;}
+.legal address{font-style:normal; color:var(--ink); margin-bottom:1em;}
+.legal .stand{color:var(--muted); font-size:.9rem;}
+.legal a{color:var(--teal-dark);}
+
+/* Formular-Zusätze */
+.field select{
+  width:100%; border:1px solid var(--line-dark); background:var(--white);
+  padding:12px 14px; font-family:inherit; font-size:.95rem; border-radius:2px; color:var(--ink);
+}
+.field-check{display:flex; gap:10px; align-items:flex-start; margin-bottom:20px;}
+.field-check input{margin-top:4px; flex:0 0 auto;}
+.field-check label{font-size:.88rem; color:var(--muted); font-family:inherit;}
+.field-check a{color:var(--teal-dark);}
+.hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;}
+.form-status{margin-top:14px; font-size:.92rem; display:none;}
+.form-status.ok{display:block; color:var(--teal-dark);}
+.form-status.err{display:block; color:#a8321f;}
+button[disabled]{opacity:.6; cursor:wait;}
+
 /* Footer */
 footer{background:var(--navy); color:var(--muted-inv); padding:32px 0;}
 footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:.85rem;}
