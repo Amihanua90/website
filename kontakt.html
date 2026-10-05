@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt | BARTMUß IT-Systeme</title>
+<meta name="description" content="Kontakt zu BARTMUß IT-Systeme, Silvio Bartmuß: telefonisch, per E-Mail oder über das Kontaktformular. Termine nach Absprache.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a href="index.html" class="brand">BARTMUß<span>·</span>IT-Systeme</a>
+    <nav id="nav" aria-label="Hauptmenü">
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="ueber.html">Über uns</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="nav-phone" href="tel:+4917840214611">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      +49 178 40 21 461
+    </a>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<div class="page-head">
+  <div class="wrap">
+    <h1>Sie wollen mit uns arbeiten? Klingt verlockend.</h1>
+    <p>Melden Sie sich, dann besprechen wir gern unseren Plan!</p>
+  </div>
+</div>
+
+<section class="contact-bg">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Nachricht schreiben</h2>
+      <form id="contact-form">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">E-Mail</label>
+          <input id="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="message">Nachricht</label>
+          <textarea id="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="border:none; cursor:pointer;">Nachricht senden</button>
+        <p id="form-note" style="display:none; margin-top:12px; color:var(--teal-dark); font-size:.88rem;">Das Formular ist eine Vorschau und versendet noch nichts. Für den echten Versand braucht es eine Anbindung (z. B. ein Formular-Dienst oder Backend).</p>
+      </form>
+    </div>
+    <div class="contact-info">
+      <h2>Direkt erreichbar</h2>
+      <dl>
+        <dt>Inhaber</dt>
+        <dd>BARTMUß IT-Systeme<br>Silvio Bartmuß</dd>
+        <dt>Mobil</dt>
+        <dd><a href="tel:+4917840214611">+49 (0) 178 40 21 461</a></dd>
+        <dt>E-Mail</dt>
+        <dd><a href="mailto:info@bartmuss-it.de">info@bartmuss-it.de</a></dd>
+        <dt>Erreichbarkeit</dt>
+        <dd>Über das Kontaktformular<br>Termine nach Absprache (telefonisch/E-Mail)</dd>
+        <dt>Fernwartung</dt>
+        <dd>Schicken Sie uns gern eine Anfrage!</dd>
+      </dl>
+      <div class="social-row">
+        <a href="https://www.linkedin.com/in/silvio-bartmuss/" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></svg>
+        </a>
+        <a href="https://www.xing.com/profile/Silvio_Bartmuss2" aria-label="Xing" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M18 4l-5 8 5 8M9 8l-5 8h5l5-8H9z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/bartmussit/" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year"></span> BARTMUß IT-Systeme, Silvio Bartmuß</div>
+    <div>
+      <a href="https://www.bartmuss-it.de/impressum/" target="_blank" rel="noopener">Impressum</a>
+      <a href="https://www.bartmuss-it.de/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutzerklärung</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
