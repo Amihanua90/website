@@ -7,6 +7,31 @@ burger.addEventListener('click', () => {
   burger.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
 
+/* ---------- IT-Baukasten (Tabs mit Tastatursteuerung) ---------- */
+const kitTabs = Array.from(document.querySelectorAll('.kit-tab'));
+if (kitTabs.length) {
+  const activate = (tab, focus) => {
+    kitTabs.forEach((t) => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tab.focus();
+  };
+  kitTabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => activate(tab, false));
+    tab.addEventListener('keydown', (e) => {
+      let next = null;
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') next = kitTabs[(i + 1) % kitTabs.length];
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') next = kitTabs[(i - 1 + kitTabs.length) % kitTabs.length];
+      if (e.key === 'Home') next = kitTabs[0];
+      if (e.key === 'End') next = kitTabs[kitTabs.length - 1];
+      if (next) { e.preventDefault(); activate(next, true); }
+    });
+  });
+}
+
 /* ---------- Kontaktformular ----------
    Versand über Web3Forms (https://web3forms.com): kostenloser Access-Key,
    der an die E-Mail-Adresse info@bartmuss-it.de gebunden wird.
