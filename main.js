@@ -1,10 +1,25 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+/* ---------- Menü (Drei-Punkte-Button mit Dropdown) ---------- */
 const burger = document.getElementById('burger');
 const nav = document.getElementById('nav');
-burger.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
+const setMenu = (open) => {
+  nav.classList.toggle('open', open);
   burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  burger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+};
+burger.addEventListener('click', (e) => {
+  e.stopPropagation();
+  setMenu(!nav.classList.contains('open'));
+});
+document.addEventListener('click', (e) => {
+  if (!nav.contains(e.target)) setMenu(false);
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && nav.classList.contains('open')) {
+    setMenu(false);
+    burger.focus();
+  }
 });
 
 /* ---------- IT-Baukasten (Tabs mit Tastatursteuerung) ---------- */
