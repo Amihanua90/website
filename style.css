@@ -392,3 +392,7 @@ footer address{line-height:1.7;}
 .bm-action:focus-visible{outline:3px solid #0e5bd0; outline-offset:2px;}
 @media (prefers-reduced-motion:reduce){ .bm-dot{animation:none;} }
 @media print{ .bm-chat{display:none;} }
+
+/* Button mit Icon */
+.btn.btn-icon{display:inline-flex; align-items:center; gap:10px;}
+.btn-icon svg{width:20px; height:20px; flex:0 0 auto;}
