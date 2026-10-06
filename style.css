@@ -385,5 +385,10 @@ footer address{line-height:1.7;}
 .bm-send{width:44px; height:44px; flex:0 0 auto; display:flex; align-items:center; justify-content:center; background:#00a884; border:none; border-radius:50%; cursor:pointer;}
 .bm-send:hover{background:#008f72;}
 .bm-send svg{width:22px; height:22px; fill:#fff;}
+.bm-actions{display:flex; gap:8px; padding:0 10px 10px; background:#f0f2f5;}
+.bm-action{flex:1; display:flex; align-items:center; justify-content:center; gap:8px; height:42px; text-decoration:none; font-weight:600; font-size:.9rem; color:#008069; background:#fff; border:1px solid #00a884; border-radius:21px; transition:background .15s ease, color .15s ease;}
+.bm-action svg{width:18px; height:18px; fill:currentColor; flex:0 0 auto;}
+.bm-action:hover{background:#00a884; color:#fff;}
+.bm-action:focus-visible{outline:3px solid #0e5bd0; outline-offset:2px;}
 @media (prefers-reduced-motion:reduce){ .bm-dot{animation:none;} }
 @media print{ .bm-chat{display:none;} }

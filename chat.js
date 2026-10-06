@@ -197,6 +197,8 @@
   }
   var ICON_CHAT = 'M12 3C6.9 3 2.8 6.6 2.8 11c0 2.2 1 4.2 2.7 5.7L4.6 21l4.3-2c1 .3 2 .4 3.1.4 5.1 0 9.2-3.6 9.2-8S17.1 3 12 3z';
   var ICON_SEND = 'M3.4 20.4 21 12 3.4 3.6v6.5L15 12l-11.6 1.9z';
+  var ICON_PHONE = 'M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z';
+  var ICON_MAIL = 'M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5z';
   var ICON_CLOSE = 'M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4 17.6 5 12 10.6z';
 
   var root = el('div', 'bm-chat');
@@ -248,9 +250,22 @@
   form.appendChild(input);
   form.appendChild(sendBtn);
 
+  var actions = el('div', 'bm-actions');
+  var callBtn = el('a', 'bm-action');
+  callBtn.href = 'tel:+4917840214611';
+  callBtn.appendChild(icon(ICON_PHONE));
+  callBtn.appendChild(el('span', null, 'Anrufen'));
+  var mailBtn = el('a', 'bm-action');
+  mailBtn.href = 'mailto:info@bartmuss-it.de';
+  mailBtn.appendChild(icon(ICON_MAIL));
+  mailBtn.appendChild(el('span', null, 'E-Mail senden'));
+  actions.appendChild(callBtn);
+  actions.appendChild(mailBtn);
+
   panel.appendChild(head);
   panel.appendChild(log);
   panel.appendChild(form);
+  panel.appendChild(actions);
   root.appendChild(panel);
   root.appendChild(launcher);
   document.body.appendChild(root);
